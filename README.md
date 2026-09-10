@@ -22,3 +22,20 @@ This project involves creating a controlled cybersecurity laboratory using **Vir
 
 The lab provides a **segmented and secure environment** for conducting reconnaissance, vulnerability identification, security assessments, and hands-on testing of cybersecurity tools and techniques without exposing unauthorized systems to risk.
 
+---
+
+### 🎯 OBJECTIVE
+
+
+- Install and configure VirtualBox.
+- Create NAT Network in the VirtualBox.
+- Install/Import Kali Linux on the VirtualBox.
+- Set NAT Network in the Kali Linux.
+- Assign a consistent IP address to the Kali VM.
+- Verify network connectivity and DNS resolution.
+- Take snapshot to recover if needed.
+- Document the complete setup
+- prepare the environment for future tasks.
+  
+
+
