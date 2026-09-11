@@ -244,7 +244,7 @@ DNS:
 
 ## Problem Encountered ##
 
-No problem was encountered as i followed the steps provided
+THE problem I encountered was with the network configuration and setup but  I was able to resolved the challenge by following the guideline rules strictly
 
 
 
