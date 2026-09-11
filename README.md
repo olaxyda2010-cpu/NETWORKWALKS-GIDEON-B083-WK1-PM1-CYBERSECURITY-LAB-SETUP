@@ -107,6 +107,92 @@ Follow the steps below to build and configure the cybersecurity lab environment.
    <img width="1363" height="688" alt="image" src="https://github.com/user-attachments/assets/8191e8fc-522e-4299-ab47-82c54845ebea" />
 
 
+4. ** 🐉 Kali Linux Setup **
+
+ Import the Kali Linux ISO/OVA into VirtualBox.
+
+Download Kali Linux: https://kali.org/get-kali
+
+
+
+## Configure the Kali Linux Virtual Machine
+
+Set up Kali Linux as the primary security-testing machine for the laboratory. You can either create a new virtual machine or import the official Kali Linux VirtualBox image.
+
+
+
+### Recommended Configuration
+
+   ```text
+Name:        Kali-Linux-2026.2
+OS Type:     Linux / Debian (64-bit)
+Memory:      2048 MB
+Processors:  2
+Storage:     80 GB
+```
+
+
+
+
+
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/6d32736e-ff9c-45db-a473-0bd523be94b5" />
+<img width="1920" height="1020" alt="image" src="https://github.com/user-attachments/assets/54cf186b-3bee-4f6d-9eff-99dcbc7aa32f" />
+
+
+
+
+ ###
+ 
+ **Configure the VM Network Adapter**
+
+   The Kali Linux virtual machine was configured to use the dedicated NAT Network created for the lab.
+
+   ```text
+   Adapter:       Adapter 1
+   Attached to:   NAT Network
+   Network:       NatNetwork
+   Adapter Type:  Intel PRO/1000 MT Desktop
+```
+<img width="1279" height="753" alt="image" src="https://github.com/user-attachments/assets/55f35d12-bc84-43db-99a7-80a6a6d98126" />
+
+###
+5. **Configure a Static IP Address and Verify DNS Connectivity**
+
+   Assign a static IP address to the Kali Linux virtual machine and configure the appropriate network settings to ensure reliable communication within the lab environment.
+
+   **Kali Linux Network Configuration:**
+
+   <img width="1599" height="842" alt="image" src="https://github.com/user-attachments/assets/a4435749-3917-4ddc-a532-d9066a486b44" />
+
+
+
+
+Open terminal in the Kali Linux and run the following commands:
+
+*For Internet connectivity issue:* `bash sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0 `
+
+*To deactivate network profile:* ` bash sudo nmcli connection down Wired\ connection\ 1`
+
+*To reactivate network profile:* `bash sudo nmcli connection up Wired\ connection\ 1`
+
+
+
+
+
+
+### 
+6.**Verify Network Connectivity**
+
+Open the terminal in Kali Linux and use the following commands to confirm both Internet connectivity and DNS resolution:
+
+```bash
+ping -c 4 8.8.8.8
+ping -c 4 google.com
+```
+
+
+
+
 
 
   
