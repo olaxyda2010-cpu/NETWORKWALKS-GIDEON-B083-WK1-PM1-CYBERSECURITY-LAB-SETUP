@@ -174,7 +174,8 @@ Open terminal in the Kali Linux and run the following commands:
 *To deactivate network profile:* ` bash sudo nmcli connection down Wired\ connection\ 1`
 
 *To reactivate network profile:* `bash sudo nmcli connection up Wired\ connection\ 1`
-
+<img width="1357" height="608" alt="image" src="https://github.com/user-attachments/assets/a5bfae27-6d45-4d97-8fae-674cd7618c35" />
+All connection was confirmed running
 
 
 
@@ -189,6 +190,54 @@ Open the terminal in Kali Linux and use the following commands to confirm both I
 ping -c 4 8.8.8.8
 ping -c 4 google.com
 ```
+<img width="1354" height="355" alt="image" src="https://github.com/user-attachments/assets/f89bc1eb-1e1d-4535-8c50-d18994971936" />
+Verifying Results: Both 8.8.8.8 (gateway) and google.com (DNS) successfully returned 0% packet loss, confirming full outbound network connectivity
+
+
+
+###
+
+7. *Create a Clean VM Snapshot*
+After completing the initial network configuration and verification, a baseline VirtualBox snapshot was created.
+
+The snapshot captures the fully configured state of the laboratory environment.
+
+<img width="1248" height="401" alt="Screenshot 2026-09-11 083323" src="https://github.com/user-attachments/assets/3d016381-b1d6-4735-89cc-71693987be5c" />
+
+
+If a future exercise changes system files, breaks networking, or degrades the VM state, the machine can be restored immediately to this clean baseline.
+
+###
+
+8. **Lab Verification**  
+   Confirm that the Kali Linux machine has the correct IP address assigned and can communicate with the lab gateway and the internet.
+
+   | Test                        | Command                         | Expected Result                     |
+   |-----------------------------|---------------------------------|-------------------------------------|
+   | Check IP address            | `ip a`                          | Correct Kali IP displayed           |
+   | Test gateway                | `ping 10.0.0.1`                 | Successful replies                  |
+   | Test Internet connectivity  | `ping 8.8.8.8`                  | Successful replies                  |
+   | Test DNS resolution         | `nslookup networkwalks.com`     | Domain resolves                     |
+   | Verify Nmap                 | `nmap --version`                | Nmap version displayed              |
+   | Verify snapshot             | Restore snapshot and run `ip a` | Baseline configuration restored     |
+
+   ###
+   **Example Result**
+
+IP Address:
+10.0.0.2/24
+
+Gateway:
+10.0.0.1
+
+DNS:
+8.8.8.8
+
+   
+
+
+
+
 
 
 
