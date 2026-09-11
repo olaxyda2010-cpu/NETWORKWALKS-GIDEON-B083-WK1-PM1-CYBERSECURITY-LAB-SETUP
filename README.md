@@ -193,7 +193,7 @@ ping -c 4 google.com
 <img width="1354" height="355" alt="image" src="https://github.com/user-attachments/assets/f89bc1eb-1e1d-4535-8c50-d18994971936" />
 Verifying Results: Both 8.8.8.8 (gateway) and google.com (DNS) successfully returned 0% packet loss, confirming full outbound network connectivity
 
-
+---
 
 ###
 
@@ -207,9 +207,13 @@ The snapshot captures the fully configured state of the laboratory environment.
 
 If a future exercise changes system files, breaks networking, or degrades the VM state, the machine can be restored immediately to this clean baseline.
 
+
+---
+
+
 ###
 
-8. **Lab Verification**  
+**Lab Verification**  
    Confirm that the Kali Linux machine has the correct IP address assigned and can communicate with the lab gateway and the internet.
 
    | Test                        | Command                         | Expected Result                     |
@@ -221,8 +225,9 @@ If a future exercise changes system files, breaks networking, or degrades the VM
    | Verify Nmap                 | `nmap --version`                | Nmap version displayed              |
    | Verify snapshot             | Restore snapshot and run `ip a` | Baseline configuration restored     |
 
-   ###
-   **Example Result**
+ 
+ ###
+ ## Example Result ##
 
 IP Address:
 10.0.0.2/24
@@ -232,6 +237,92 @@ Gateway:
 
 DNS:
 8.8.8.8
+
+---
+
+###
+
+## Problem Encountered ##
+
+No problem was encountered as i followed the steps provided
+
+
+
+---
+
+###
+## Experience From The Session ##
+
+
+- Virtual Machine Networking:
+
+I learned that using NAT Network in VM will help the machines in the lab communicate safely.
+
+- Static IP configuration:
+
+I learned how to configure IP addresses, DNS Connectivity , Gateways and Test Connectivity, 
+
+- Screenshots in Virtual Machine:
+
+I was able to identify and able take screenshots.
+
+- Verify Nmap
+  
+I learned to verify the concept of Nmap
+
+- Snapshots:
+
+Saved a baseline state right after setting up Kali so I can reset the VM anytime.
+
+---
+
+###
+
+## 🎯 Key Takeaways & Findings ##
+
+- Network Integrity: Verified host-to-gateway routing and DNS translation on Kali Linux (10.0.0.0/24).
+
+- Tool Proficiency: Successfully performed host discovery, port scanning, and service enumeration using native CLI utilities (ping, nc, nmap).
+
+- Lab Security: Enforced privacy best practices by isolating test targets and abstracting network configurations
+
+---
+
+###
+
+## 🔐 Security & Ethical Issue ##
+This laboratory is completely for educational purpose only.
+
+No target-specific credentials, confidential information, patient records, private infrastructure details, or sensitive assessment evidence are included in this repository.
+
+---
+###
+
+
+## 🔭 Tools and Resources ##
+
+To install 7-Zip: https://7-zip.org/download.html.
+
+To install VirtualBox Machine: https://virtualbox.org/wiki/Downloads.
+
+To install Kali Linux: https://kali.org/get-kali.
+
+---
+
+### 👤 Author
+
+Oyewale Olaoluwa Gideon
+
+Cybersecurity Intern B083
+
+ LinkedIn: www.linkedin.com/in/oyewale-olaouwa-60b252bb
+
+---
+
+###  
+
+## 📌 Project Information ##
+Program Name: Cybersecurity at Networkwalks | Week: 01 | Project: Cybersecurity and Pentesting Lab Setup | Repository: GitHub
 
    
 
